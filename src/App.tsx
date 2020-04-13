@@ -4,7 +4,7 @@ import './styles/core.scss'
 import { Router } from './containers/Router'
 
 export class App extends React.Component {
-  render () {
+  render ():React.ReactNode {
     return <Router />
   }
 }

@@ -3,7 +3,7 @@ import * as s from './About.scss'
 import avatar from 'static/img/avatar.jpg'
 
 export class About extends React.Component {
-  render () {
+  render ():React.ReactNode {
     return (
       <div className={s.root}>
         <img className={s.img} src={avatar} />

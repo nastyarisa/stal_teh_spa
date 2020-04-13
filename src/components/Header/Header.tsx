@@ -6,47 +6,47 @@ import classNames from 'classnames'
 export class Header extends React.Component {
   private items = [
     {
-      title: "О нас",
+      title: 'О нас',
       href: '/about',
       key: 'about'
     },
     {
-      title: "Услуги",
+      title: 'Услуги',
       href: '/services',
       key: 'services'
     },
     {
-      title: "Оборудование",
+      title: 'Оборудование',
       href: '/equipment',
       key: 'equipment'
     },
     {
-      title: "Наши работы",
+      title: 'Наши работы',
       href: '/works',
       key: 'works'
     },
     {
-      title: "Партнеры",
+      title: 'Партнеры',
       href: '/partners',
       key: 'partners'
     },
     {
-      title: "Контакты",
+      title: 'Контакты',
       href: '/contacts',
       key: 'contacts'
     }
   ]
 
   getActivePage = ():string => {
-    const match = window.location.pathname.match(/^\/(\w+)/);
-    return match && match[1] || "";
+    const match = window.location.pathname.match(/^\/(\w+)/)
+    return (match && match[1]) || ''
   }
 
   state = {
     activePage: this.getActivePage()
   }
 
-  linkHandler = (key) => {
+  linkHandler = (key):void => {
     this.setState({
       activePage: key
     })
@@ -56,18 +56,22 @@ export class Header extends React.Component {
     const logoClasses = classNames(s.logo, s.menu_item, s.active)
     const menuList = this.items.map((item) => {
       const itemClasses = classNames(s.menu_item, {
-        [s.active]: this.state.activePage === item.key,
+        [s.active]: this.state.activePage === item.key
       })
-      return <li className={s.item} key={item.key}>
-        <Link to={item.href} className={itemClasses} onClick={() => this.linkHandler(item.key)}>{item.title}</Link>
-      </li>
+      return (
+        <li className={s.item} key={item.key}>
+          <Link to={item.href} className={itemClasses} onClick={():void => this.linkHandler(item.key)}>
+            {item.title}
+          </Link>
+        </li>
+      )
     })
 
     return (
       <header className={s.header}>
         <div className={s.wrapper}>
           <nav className={s.nav}>
-            <Link to="/" className={logoClasses} onClick={() => this.linkHandler("")}>
+            <Link to='/' className={logoClasses} onClick={():void => this.linkHandler('')}>
               <div className={s.logo}>Сталь-Технология</div>
             </Link>
             <ul className={s.list}>
