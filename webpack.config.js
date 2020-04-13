@@ -7,7 +7,8 @@ const {typescriptRules} = require("./config/typescript");
 const {cssModulesRules, noCssModulesRules} = require("./config/style");
 const {eslintRules} = require("./config/eslint");
 const {imageRules} = require("./config/image");
-const {devServer} = require("./config/devServer.js");
+const {mediaRules} = require("./config/media");
+const {devServer} = require("./config/devServer");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
@@ -61,6 +62,7 @@ const webpackConfig = {
       cssModulesRules,
       noCssModulesRules,
       ...imageRules,
+      ...mediaRules,
     ]
   }
 };

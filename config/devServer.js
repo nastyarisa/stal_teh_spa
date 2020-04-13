@@ -23,3 +23,7 @@ const devServer = {
     ],
   }
 };
+
+module.exports = {
+  devServer,
+};

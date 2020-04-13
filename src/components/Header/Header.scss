@@ -1,18 +1,52 @@
-.root {
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // background-color: @lightgray;
+  background-color: #fff;
+}
+
+:global(#index) .header {
+  background-color: $lightgray;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.nav {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 20px 30px;
-  background-color: $header-color;
+  justify-content: space-between;
 }
 
-.link {
-  padding: 10px 25px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-end;
 }
 
-.button {
-  @include btn;
-  margin-left: auto;
+.item {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 24px;
+  font-weight: normal;
+  a {
+    color: $black;
+    &:hover {
+      color: $basecolor;
+    }
+  }
+}
+
+.item .menu_item.active {
+  color: $basecolor;
 }
