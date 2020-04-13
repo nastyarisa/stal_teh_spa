@@ -1,14 +1,8 @@
-# webpack-base-config
+# Сайт-визитка для компании "Сталь-Технология"
 
-Это мой базовый конфиг для проекта на React. Он умеет собирать: 
-
-- React
-- Typescript (es6 +)
-- Scss (modules)
-- scss global variables and mixin
-- jpg/png/svg
-- favicon.ico
-
-` yarn start` - запускает dev server
-
-` yarn build`- компилирует статику для деплоя
+Используемые технологии: 
+* react
+* webpack
+* sass
+* typescript
+* eslint

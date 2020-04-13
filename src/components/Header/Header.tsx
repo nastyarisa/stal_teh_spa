@@ -67,7 +67,7 @@ export class Header extends React.Component {
       <header className={s.header}>
         <div className={s.wrapper}>
           <nav className={s.nav}>
-            <Link to="/" className={logoClasses}>
+            <Link to="/" className={logoClasses} onClick={() => this.linkHandler("")}>
               <div className={s.logo}>Сталь-Технология</div>
             </Link>
             <ul className={s.list}>
