@@ -60,6 +60,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "devDependencies": {
+    "@types/googlemaps": "^3.39.3",
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
     "babel-eslint": "10.1.0",

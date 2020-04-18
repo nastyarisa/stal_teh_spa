@@ -1,13 +1,14 @@
 .header {
   padding-top: 30px;
   padding-bottom: 30px;
-  // background-color: @lightgray;
   background-color: #fff;
+  //background-color: $lightgray;
 }
 
-:global(#index) .header {
-  background-color: $lightgray;
+.wrapper {
+  @include wrapper;
 }
+
 
 .logo {
   text-transform: uppercase;

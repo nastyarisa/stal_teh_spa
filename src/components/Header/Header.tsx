@@ -26,11 +26,6 @@ export class Header extends React.Component {
       key: 'works'
     },
     {
-      title: 'Партнеры',
-      href: '/partners',
-      key: 'partners'
-    },
-    {
       title: 'Контакты',
       href: '/contacts',
       key: 'contacts'

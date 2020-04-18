@@ -6,6 +6,10 @@
   padding-bottom: 60px;
 }
 
+.wrapper {
+  @include wrapper;
+}
+
 .block {
   display: flex;
   flex-direction: row;

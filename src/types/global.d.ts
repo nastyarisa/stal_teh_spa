@@ -23,3 +23,8 @@ declare module "*.svg" {
     const o: any;
     export = o;
 }
+
+// interface Window {
+//     google: any;
+// }
+
